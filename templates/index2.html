@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Display the images</title>
+</head>
+<body>
+    <p>Files Uploaded</p>
+    {% for file in files %}
+    {% print(file) %}
+    {% endfor %}
+    <form action = "/augmentations" method="POST" enctype="multipart/form-data">
+        <input type = "submit" value="display">
+    </form>
+    <form action = "/augmentation", methods="POST" enctype="multipart/form-data">
+        <input type="submit" value="augmentation">
+    </form>
+</body>
+</html>
